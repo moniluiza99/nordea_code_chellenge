@@ -1,5 +1,5 @@
 # Nordea conding challenge 
-## Build with
+## Build it with
 - React
 - React-dom
 - Typescript
