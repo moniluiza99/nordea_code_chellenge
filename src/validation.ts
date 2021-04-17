@@ -9,27 +9,26 @@
  * @example
  * doesTriangleExist(1,2,3);
  */
+export function doesTriangleExist(
+    sideA:number, sideB:number, sideC:number,
+): boolean {
+  let longSide:number = sideA;
+  const shortSides:number[] = [];
 
-export function doesTriangleExist(sideA:number, sideB:number, sideC:number){
-    let longSide:number = sideA;
-    let shortSides:number[] = [];
+  if (longSide<sideB) {
+    shortSides.push(longSide);
+    longSide = sideB;
+  } else {
+    shortSides.push(sideB);
+  }
 
-    if(longSide<sideB){
-        shortSides.push(longSide);
-        longSide = sideB;
-        
-    }else{
-        shortSides.push(sideB);
-    }
-
-    if(longSide<sideC){
-        shortSides.push(longSide);
-        longSide = sideC;
-        
-    }else{
-        shortSides.push(sideC);
-    }
+  if (longSide<sideC) {
+    shortSides.push(longSide);
+    longSide = sideC;
+  } else {
+    shortSides.push(sideC);
+  }
 
 
-    return longSide<shortSides[0]+shortSides[1];
+  return longSide<shortSides[0]+shortSides[1];
 }
