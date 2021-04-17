@@ -1,5 +1,6 @@
 import React, {ChangeEvent, FC, useState} from 'react';
 import {doesTriangleExist} from './validation';
+import './App.css';
 const MIN_VALUE = 1;
 const App:FC<{}> = ()=>{
   const [valueA, setValueA] = useState<number>(1);
@@ -28,7 +29,7 @@ const App:FC<{}> = ()=>{
   };
 
   return (
-    <div>
+    <div className="trinagle_form">
       <input
         type="number"
         onChange={(e:ChangeEvent<HTMLInputElement>)=>{

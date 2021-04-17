@@ -5,6 +5,7 @@
 - Typescript
 - ESLint
 - Webpack
+- Jest
 
  
 
@@ -12,3 +13,6 @@
 
 1. `npm install`
 2. `npm start`
+
+## To test
+`npm test`
